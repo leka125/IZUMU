@@ -1,0 +1,115 @@
+@model IZUMU.Clientes.UI.Models.DatosPersonales
+@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Agregar Información del Cliente";
+}
+<h2>Crear Datos Personales</h2>
+@if (ViewContext.HttpContext.Response.StatusCode == 404)
+{
+    <div class="alert alert-warning">No se encontró el cliente solicitado.</div>
+}
+else if (ViewContext.HttpContext.Response.StatusCode == 500)
+{
+    <div class="alert alert-danger">Error interno del servidor. Intente nuevamente más tarde.</div>
+}
+<form asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="IdTipoDeDocumento">Tipo de identificación</label>
+                <select asp-for="IdTipoDeDocumento" class="form-control" asp-items="ViewBag.TiposDeDocumento">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span asp-validation-for="IdTipoDeDocumento" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="NumeroDeDocumento">Número de identificación</label>
+                <input asp-for="NumeroDeDocumento" class="form-control" />
+                <span asp-validation-for="NumeroDeDocumento" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PrimerNombre">Primer Nombre</label>
+                <input asp-for="PrimerNombre" class="form-control" />
+                <span asp-validation-for="PrimerNombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SegundoNombre">Segundo Nombre</label>
+                <input asp-for="SegundoNombre" class="form-control" />
+                <span asp-validation-for="SegundoNombre" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PrimerApellido">Primer Apellido</label>
+                <input asp-for="PrimerApellido" class="form-control" />
+                <span asp-validation-for="PrimerApellido" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SegundoApellido">Segundo Apellido</label>
+                <input asp-for="SegundoApellido" class="form-control" />
+                <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="FechaDeNacimiento">Fecha de nacimiento</label>
+                <input asp-for="FechaDeNacimiento" type="date" class="form-control" />
+                <span asp-validation-for="FechaDeNacimiento" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="DireccionDeResidencia">Dirección</label>
+                <input asp-for="DireccionDeResidencia" class="form-control" />
+                <span asp-validation-for="DireccionDeResidencia" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="NúmeroDeCelular">Celular</label>
+                <input asp-for="NúmeroDeCelular" class="form-control" />
+                <span asp-validation-for="NúmeroDeCelular" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PlanContratado">Plan de preferencia</label>
+                <select asp-for="PlanContratado" class="form-control" asp-items="ViewBag.PlanesContratados">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span asp-validation-for="PlanContratado" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3"></div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

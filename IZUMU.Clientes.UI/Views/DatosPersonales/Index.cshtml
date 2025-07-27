@@ -1,0 +1,87 @@
+@model IEnumerable<IZUMU.Clientes.UI.Models.DatosPersonales>
+@{
+    ViewData["Title"] = "Listado de Datos Personales";
+}
+<h2>Administración clientes IZUMU</h2>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-warning">@TempData["ErrorMessage"]</div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<a asp-action="Create" class="btn btn-success">Agregar Cliente</a>
+<div class="mb-3"></div>
+<link rel="stylesheet" href="~/css/datos-personales.css" />
+<table class="table table-bordered datos-personales-table">
+    <thead>
+        <tr>
+            <th>Tipo Identificación</th>
+            <th>Número Identificación</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Email</th>
+            <th>Dirección</th>
+            <th>Celular</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IdTipoDeDocumento</td>
+                    <td>@item.NumeroDeDocumento</td>
+                    <td>@item.PrimerNombre</td>
+                    <td>@item.SegundoNombre</td>
+                    <td>@item.PrimerApellido</td>
+                    <td>@item.SegundoApellido</td>
+                    <td>@item.FechaDeNacimiento.ToString("dd-MM-yyyy")</td>
+                    <td>@item.Email</td>
+                    <td>@item.DireccionDeResidencia</td>
+                    <td>@item.NúmeroDeCelular</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a asp-action="Edit" asp-route-id="@item.IdInformacionPersonal" class="btn btn-warning btn-sm">Editar</a>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="eliminarCliente(@item.IdInformacionPersonal)">Eliminar</button>
+<script>
+    function eliminarCliente(id) {
+        if (confirm('¿Está seguro que desea eliminar este cliente?')) {
+            fetch('/DatosPersonales/Delete/' + id, {
+                method: 'DELETE',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    window.location.reload();
+                } else {
+                    alert(data.message || 'Error al eliminar el cliente');
+                }
+            })
+            .catch(() => alert('Error al eliminar el cliente'));
+        }
+    }
+</script>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="11" class="text-center">No hay registros</td></tr>
+        }
+    </tbody>
+</table>

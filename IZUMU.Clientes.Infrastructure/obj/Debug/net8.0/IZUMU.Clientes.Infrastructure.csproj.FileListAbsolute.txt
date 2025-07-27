@@ -1,0 +1,12 @@
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.AssemblyInfo.cs
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\bin\Debug\net8.0\IZUMU.Clientes.Infrastructure.deps.json
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\bin\Debug\net8.0\IZUMU.Clientes.Infrastructure.dll
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\bin\Debug\net8.0\IZUMU.Clientes.Infrastructure.pdb
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.dll
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\refint\IZUMU.Clientes.Infrastructure.dll
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\IZUMU.Clientes.Infrastructure.pdb
+C:\Users\Leka125\Dev\IZUMU\IZUMU.Clientes.Infrastructure\obj\Debug\net8.0\ref\IZUMU.Clientes.Infrastructure.dll

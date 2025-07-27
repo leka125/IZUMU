@@ -1,0 +1,14 @@
+/* Estilos para la tabla de DatosPersonales */
+.datos-personales-table thead {
+    background-color: #f2f2f2;
+}
+.datos-personales-table {
+    border-collapse: collapse;
+}
+.datos-personales-table th, .datos-personales-table td {
+    border: 1px solid #dee2e6;
+}
+.datos-personales-table .btn-group {
+    display: flex;
+    gap: 4px;
+}
