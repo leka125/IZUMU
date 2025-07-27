@@ -1,5 +1,8 @@
 # IZUMU
 
+OBTENER EL PROYECTO EN MAQUINA LOCAL
+-Descargue el proyecto en una carpeta llamada IZUMU
+
 PRE-REQUISITO:
 -Instalar Docker 
   https://www.docker.com/
