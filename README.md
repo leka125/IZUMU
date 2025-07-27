@@ -1,16 +1,19 @@
 # IZUMU
 
-OBTENER EL PROYECTO EN MAQUINA LOCAL
--Descargue el proyecto en una carpeta llamada IZUMU
+## OBTENER EL PROYECTO EN MAQUINA LOCAL
 
-PRE-REQUISITO:
+Descargue el proyecto en una carpeta llamada IZUMU
+
+---
+## PRE-REQUISITO:
 -Instalar Docker 
   https://www.docker.com/
 -Instalar nodejs
   https://www.nodejs.tech/es/download
 -Instalar o tener instalado Microsoft Sql Server
 
-CREAR BASE DE DATOS IZUMU
+---
+## CREAR BASE DE DATOS IZUMU
 -Abrir Sql management studio
 -Crear una base de datos con el nombre IZUMU
 -Abra una nueva consulta en Sql management studio
@@ -18,10 +21,10 @@ CREAR BASE DE DATOS IZUMU
 -Pegue el contendio en la consulta abierta en Sql management studio
 -Ejecute la consulta
 
+---
+## PUBLICAR APP IZUMU
 
-PUBLICAR APP IZUMU
-
-Opción 1:
+## Opción 1:
 
 -Abra el proyecto.
 -En la carpeta IZUMU.Clientes.UI abrir appsettings.json
@@ -36,7 +39,7 @@ Opción 1:
 
 
 
-Opcion 2:
+## Opcion 2:
 
 Paso 1:
 -En el explorador de archivos ubicarse en la carpeta: ~/IZUMU
